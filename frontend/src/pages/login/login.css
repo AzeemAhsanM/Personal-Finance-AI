@@ -1,0 +1,112 @@
+/* --- Login Container --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height to ensure it covers the screen even if content is short */
+  background-color: #f0f2f5; /* Light grey background */
+}
+
+/* --- Login Form Box --- */
+.login-form {
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+  text-align: center;
+  width: 100%;
+  max-width: 400px; /* Limit width for larger screens */
+  margin: 20px; /* Add margin for small screens */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* --- Header Section (Logo + Title) --- */
+.login-header {
+  display: flex;
+  flex-direction: column; /* Stack logo and title vertically */
+  align-items: center; /* Center them horizontally */
+  margin-bottom: 30px;
+}
+
+.login-logo {
+  height: 80px; /* Adjust logo size as needed */
+  margin-bottom: 15px; /* Space between logo and title */
+}
+
+.login-form h2 {
+  margin: 0; /* Remove default margin from h2 */
+  font-size: 28px;
+  color: #343a40; /* Darker text for title */
+}
+
+/* --- Error Message --- */
+.error-message {
+  color: #dc3545; /* Red for error messages */
+  margin-top: -10px; /* Adjust spacing */
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* --- Input Fields --- */
+.login-form input {
+  width: calc(100% - 24px); /* Full width minus padding */
+  padding: 12px;
+  margin-bottom: 20px; /* More space between inputs */
+  border: 1px solid #ced4da; /* Lighter border */
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form input:focus {
+  border-color: #80bdff; /* Highlight on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none; /* Remove default outline */
+}
+
+/* --- Submit Button --- */
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4a47a3; /* Your primary blue/purple color */
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-form button:hover:not(:disabled) {
+  background-color: #3e3b8a; /* Slightly darker on hover */
+}
+
+.login-form button:disabled {
+  background-color: #a0a0a0; /* Grey out when disabled (loading) */
+  cursor: not-allowed;
+}
+/* Add this to the bottom of Login.css */
+
+.login-subtitle {
+  margin-top: -15px; /* Adjust spacing */
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 16px;
+}
+
+.signup-option {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-option a {
+  color: #4a47a3; /* Your primary brand color */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-option a:hover {
+  text-decoration: underline;
+}

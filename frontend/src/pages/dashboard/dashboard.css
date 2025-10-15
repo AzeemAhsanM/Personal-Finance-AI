@@ -1,0 +1,105 @@
+/* --- Main Dashboard Container --- */
+.dashboard-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Creates consistent space between all cards */
+}
+
+/* --- Balance Card (Top Blue/Purple Card) --- */
+.balance-card {
+  background-color: #4a47a3; /* The primary color from your design */
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.balance-card h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.balance-card .balance-amount {
+  margin: 0 0 8px 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #82ca9d; /* Light green for the amount */
+}
+
+.balance-card p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* --- Charts Layout (Side-by-side) --- */
+.charts-container {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+/* --- General Card Styles (for charts & recent activity) --- */
+.chart-card,
+.recent-activity-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card {
+  flex: 1; /* Allows both chart cards to share the space equally */
+  min-width: 300px; /* Prevents cards from getting too squished */
+}
+
+.chart-card h3,
+.recent-activity-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* --- Recent Activity Table --- */
+.recent-activity-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-activity-card th,
+.recent-activity-card td {
+  padding: 12px 0;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.recent-activity-card th {
+  font-weight: 600;
+  color: #666;
+}
+
+.recent-activity-card td {
+  color: #333;
+}
+
+.recent-activity-card .income-amount {
+  color: #28a745; /* Green for income */
+  font-weight: 600;
+}
+
+.recent-activity-card .expense-amount {
+  color: #dc3545; /* Red for expense */
+  font-weight: 600;
+}
+
+/* --- Responsive Design for Smaller Screens --- */
+@media (max-width: 768px) {
+  .charts-container {
+    flex-direction: column; /* Stack charts vertically on mobile */
+  }
+
+  .dashboard-container {
+    padding: 16px; /* Reduce padding on smaller screens */
+  }
+}

@@ -1,0 +1,37 @@
+/* --- Main Navigation Container --- */
+.navbar-container {
+  display: flex;
+  justify-content: center; /* Aligns links horizontally */
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 25px 20px rgba(0, 0, 0, 0.08);
+  max-width: 750px;
+  margin: -10px auto;
+}
+
+/* --- Navigation Link Styles (for all links) --- */
+.nav-link {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: transparent; /* Default is no background */
+  color: #333;
+  text-decoration: none; /* Removes underline from links */
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* --- Hover Effect (when you mouse over a link) --- */
+.nav-link:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+/* --- Active Link Style --- */
+/* This style applies ONLY to the link of the page you are currently on */
+.nav-link.active {
+  background-color: #4a47a3; /* The blue/purple color from your design */
+  color: white;
+}

@@ -1,0 +1,49 @@
+.transactions-container {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(172, 154, 154, 0.1);
+}
+
+.transactions-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+.transactions-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-container th,
+.transactions-container td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.action-btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #007bff;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.income-amount {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.expense-amount {
+  color: #dc3545;
+  font-weight: bold;
+}
