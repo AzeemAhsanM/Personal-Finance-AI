@@ -1,11 +1,11 @@
 # schemas.py - pydantic models (request/response shapes)
 
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, Field
 from typing import Optional
 from datetime import date
 
 class UserCreate(BaseModel):
-    email: EmailStr
+    username: str
     password: str
     full_name: Optional[str] = None
 
@@ -13,13 +13,16 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
+class UserRead(BaseModel):
+    username: str
+    id: int
 class TokenPayload(BaseModel):
     sub: Optional[str] = None
 
 class TransactionCreate(BaseModel):
-    amount: float
+    amount: int
     type: str
-    category: Optional[str] = None
+    category: str
     description: Optional[str] = None
     date: date
 

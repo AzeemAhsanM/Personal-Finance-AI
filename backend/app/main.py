@@ -5,8 +5,9 @@ from .database import create_db_and_tables
 from .routers import auth_router, transactions_router, dashboard_router, ai_router
 from fastapi.middleware.cors import CORSMiddleware
 import os
+import uvicorn
 
-app = FastAPI(title="FinTracker AI")
+app = FastAPI(title="WealthFy")
 
 # allow CORS from frontend dev server
 origins = [
@@ -28,3 +29,6 @@ app.include_router(auth_router.router)
 app.include_router(transactions_router.router)
 app.include_router(dashboard_router.router)
 app.include_router(ai_router.router)
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
