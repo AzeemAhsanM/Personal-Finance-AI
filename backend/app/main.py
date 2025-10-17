@@ -10,7 +10,7 @@ app = FastAPI(title="WealthFy")
 
 # allow CORS from frontend dev server
 origins = [
-    os.getenv("FRONTEND_URL", "https://main.dfbfpisfp5uk4.amplifyapp.com")
+    os.getenv("FRONTEND_URL", "http://localhost:3000")
 ]
 app.add_middleware(
     CORSMiddleware,

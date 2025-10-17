@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "WealthFyBackend-env.eba-dmzp9vaa.eu-north-1.elasticbeanstalk.com",
+  baseURL: process.env.REACT_APP_API_BASE_URL,
 });
 
 api.interceptors.request.use((config) => {
