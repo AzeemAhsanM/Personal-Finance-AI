@@ -3,6 +3,9 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header/Header.js';
 import Navbar from './components/Navbar/Navbar.js';
 import Dashboard from './pages/dashboard/dashboard.js';
+import AddTransaction from './pages/Addtransaction/Addtransaction.js';
+import FinBot from './pages/FinBot/FinBot.js';
+import Calculator from './pages/calculator/calculator.js';
 import Login from './pages/login/login.js';
 import Register from './pages/login/register.js';
 import './App.css';
@@ -56,6 +59,9 @@ function App() {
           {/* Protected Routes */}
           <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" />} />
           <Route path="/transactions" element={user ? <Transactions /> : <Navigate to="/login" />} />
+          <Route path="/add" element={user ? <AddTransaction /> : <Navigate to="/login" />} />
+          <Route path="/finbot" element={user ? <FinBot /> : <Navigate to="/login" />} />
+          <Route path="/calculator" element={user ? <Calculator /> : <Navigate to="/login" />} />
           
           {/* Default Route */}
           <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />

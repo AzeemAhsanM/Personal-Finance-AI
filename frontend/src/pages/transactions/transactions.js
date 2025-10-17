@@ -17,15 +17,6 @@ const Transactions = () => {
     fetchTransactions();
   }, []);
 
-  const handleDelete = async (id) => {
-    try {
-      await api.delete(`/transactions/${id}`);
-      setTransactions(transactions.filter(tx => tx.id !== id));
-    } catch (error) {
-      console.error('Error deleting transaction:', error);
-    }
-  };
-
   return (
     <div className="transactions-container">
       <h2>All Transactions</h2>
@@ -33,30 +24,23 @@ const Transactions = () => {
         <thead>
           <tr>
             <th>Date</th>
-            <th>Description</th>
             <th>Category</th>
             <th>Amount</th>
-            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {transactions.map((tx) => (
             <tr key={tx.id}>
-              <td>{tx.date}</td>
-              <td>{tx.description}</td>
-              <td>{tx.category}</td>
-              <td className={tx.type === 'income' ? 'income-amount' : 'expense-amount'}>
-                {tx.type === 'income' ? '+' : '-'}${tx.amount.toFixed(2)}
-              </td>
-              <td>
-                <button className="action-btn edit-btn">Edit</button>
-                <button onClick={() => handleDelete(tx.id)} className="action-btn delete-btn">Delete</button>
+              <td className="date"><span>{tx.date}</span></td>
+              <td className="category"><span>{tx.category}</span></td>
+              <td className={`amount ${tx.type === 'income' ? 'income-amount' : 'expense-amount'}`}>
+                <span>{tx.type === 'income' ? '+' : '-'}₹{tx.amount.toFixed(2)}</span>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-    </div>
+    </div>  
   );
 };
 

@@ -23,7 +23,6 @@ class TransactionCreate(BaseModel):
     amount: int
     type: str
     category: str
-    description: Optional[str] = None
     date: date
 
 class TransactionRead(TransactionCreate):
