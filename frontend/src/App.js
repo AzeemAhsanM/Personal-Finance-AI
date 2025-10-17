@@ -14,7 +14,6 @@ import Transactions from './pages/transactions/transactions.js';
 
 function App() {
   const [user, setUser] = useState(null);
-  // 1. Add a loading state to wait for the initial user check
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import api from '../../api'; // Adjust the path if needed
+import api from '../../api'; 
 import logo from '../../assets/logo.png';
-import './login.css'; // We can reuse the same CSS for a consistent look!
+import './login.css'; 
 
 function Register() {
   // 1. State for all necessary fields

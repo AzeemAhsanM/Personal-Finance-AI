@@ -5,7 +5,7 @@ from typing import List
 from ..schemas import TransactionCreate, TransactionRead
 from ..models import User
 from ..transactions import create_transaction, list_transactions
-from ..auth import get_current_user # Import the main security dependency
+from ..auth import get_current_user 
 
 router = APIRouter(prefix="/transactions", tags=["transactions"])
 

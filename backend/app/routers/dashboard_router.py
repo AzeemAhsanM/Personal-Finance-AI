@@ -21,7 +21,7 @@ def summary(current_user: User = Depends(get_current_user)):
             .where(Transaction.user_id == user_id, Transaction.type == "expense")
         ).one()
 
-        # ✅ PostgreSQL-friendly date grouping
+        # PostgreSQL-friendly date grouping
         monthly_summary = session.exec(
             select(
                 func.to_char(Transaction.date, 'YYYY-MM').label("month"),

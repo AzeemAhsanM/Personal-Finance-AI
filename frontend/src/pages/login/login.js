@@ -18,22 +18,17 @@ const Login = ({ setUser }) => {
     setError(''); // Clear any previous errors
 
     try {
-      // 2. CRITICAL FIX: Use the correct '/auth/login' endpoint
-      // Note: FastAPI's OAuth2 expects form data. If the below doesn't work,
-      // you may need to send the data as URLSearchParams (see previous response).
+    
       const response = await api.post('/auth/login', {
         username: username,
         password: password,
       });
 
       const { access_token } = response.data;
-      localStorage.setItem('token', access_token); // Store the token
-
-      // Use the configured api service to automatically send the new token
+      localStorage.setItem('token', access_token); 
       const userResponse = await api.get('/auth/me');
-      setUser(userResponse.data); // Update the user state in the App component
-
-      navigate('/'); // Navigate to the dashboard on successful login
+      setUser(userResponse.data); 
+      navigate('/'); 
     } catch (err) {
       setError('Invalid username or password');
     } finally {

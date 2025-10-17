@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { PaperPlaneIcon } from '@radix-ui/react-icons'; // Using a popular icon library
-import api from '../../api'; // Adjust path if needed
-import './FinBot.css';
+import { PaperPlaneIcon } from '@radix-ui/react-icons'; 
+import api from '../../api'; 
 
 const FinBot = () => {
   const [messages, setMessages] = useState([

@@ -1,7 +1,6 @@
-/* --- Main Navigation Container --- */
 .navbar-container {
   display: flex;
-  justify-content: center; /* Aligns links horizontally */
+  justify-content: center;
   background-color: white;
   padding: 10px;
   border-radius: 15px;
@@ -10,7 +9,6 @@
   margin: -10px auto;
 }
 
-/* --- Navigation Link Styles (for all links) --- */
 .nav-link {
   padding: 10px 20px;
   border-radius: 8px;
