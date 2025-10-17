@@ -35,3 +35,20 @@
   background-color: #4a47a3; /* The blue/purple color from your design */
   color: white;
 }
+/* --- Responsive Styles for Mobile --- */
+@media (max-width: 768px) {
+  .navbar-container {
+    /* Stack the links vertically instead of horizontally */
+    flex-direction: column;
+
+    /* Center the stacked links */
+    align-items: center;
+
+    /* Add some space between the stacked links */
+    gap: 10px;
+
+    /* Let the container take up only the width it needs */
+    width: auto;
+    margin: 20px; /* Adjust margin for mobile */
+  }
+}

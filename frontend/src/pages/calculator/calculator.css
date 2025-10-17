@@ -1,0 +1,99 @@
+.calculator-page-container {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.calculator-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Important for the toggle button's border radius */
+}
+
+.calculator-toggle {
+  display: flex;
+  background-color: #f0f2f5;
+}
+
+.calculator-toggle button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.calculator-toggle button.active {
+  background-color: #4a47a3;
+  color: white;
+}
+
+.calculator-content {
+  padding: 32px;
+}
+
+.form-group-calc {
+  margin-bottom: 24px;
+}
+
+.form-group-calc label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.form-group-calc input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+.result-section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #eee;
+}
+
+.result-section p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.result-section p span {
+  font-weight: 700;
+  color: #333;
+}
+
+.result-section .total-value {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.result-section .total-value span {
+  color: #4a47a3; /* Your primary color */
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+  .calculator-page-container {
+    padding: 16px;
+    margin-top: 16px;
+  }
+  .calculator-content {
+    padding: 24px;
+  }
+  .result-section .total-value {
+    font-size: 18px;
+  }
+}

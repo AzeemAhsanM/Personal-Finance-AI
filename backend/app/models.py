@@ -17,7 +17,6 @@ class Transaction(SQLModel, table=True):
     amount: float
     type: str  # "income" or "expense"
     category: str
-    description: Optional[str] = None
     date: date
 
     user: Optional[User] = Relationship(back_populates="transactions")

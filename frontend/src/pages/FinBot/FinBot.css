@@ -1,0 +1,151 @@
+.finbot-container {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.finbot-card {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 70vh; /* Make the card take up a good portion of the viewport height */
+}
+
+.finbot-header {
+  padding: 24px;
+  background-color: #f7f9fc;
+  border-bottom: 1px solid #eee;
+  border-radius: 12px 12px 0 0;
+}
+
+.finbot-header h3 {
+  margin: 0;
+  color: #4a47a3;
+}
+
+.finbot-header p {
+  margin: 4px 0 0;
+  color: #666;
+}
+
+.chat-window {
+  flex-grow: 1;
+  padding: 24px;
+  overflow-y: auto; /* Enable scrolling for messages */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chat-message {
+  display: flex;
+  max-width: 75%;
+}
+
+.chat-message p {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 18px;
+  line-height: 1.5;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+}
+
+.chat-message.bot p {
+  background-color: #f0f2f5;
+  color: #333;
+  border-top-left-radius: 4px;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+}
+
+.chat-message.user p {
+  background-color: #4a47a3;
+  color: white;
+  border-top-right-radius: 4px;
+}
+
+.chat-input-form {
+  display: flex;
+  padding: 16px;
+  border-top: 1px solid #eee;
+}
+
+.chat-input-form input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.chat-input-form button {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: #4a47a3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chat-input-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Loading animation for bot response */
+.chat-message.loading p span {
+  animation: blink 1.4s infinite both;
+  font-size: 24px;
+}
+.chat-message.loading p span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.chat-message.loading p span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+  .finbot-container {
+    padding: 16px;
+    margin-top: 16px;
+  }
+
+  .finbot-card {
+    height: 80vh; /* Use more vertical space on mobile */
+  }
+
+  .finbot-header,
+  .chat-window,
+  .chat-input-form {
+    padding: 16px;
+  }
+}

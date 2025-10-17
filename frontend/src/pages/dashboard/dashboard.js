@@ -30,7 +30,7 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <div className="balance-card">
         <h2>Total Net Balance</h2>
-        <p className="balance-amount">${total_balance.toFixed(2)}</p>
+        <p className="balance-amount">₹{total_balance.toFixed(2)}</p>
       </div>
 
       <div className="charts-container">
@@ -88,9 +88,9 @@ const Dashboard = () => {
             {recent_transactions.map((tx) => (
               <tr key={tx.id}>
                 <td>{tx.date}</td>
-                <td>{tx.description}</td>
+                <td>{tx.category}</td>
                 <td className={tx.type === 'income' ? 'income-amount' : 'expense-amount'}>
-                  {tx.type === 'income' ? '+' : '-'}${tx.amount.toFixed(2)}
+                  {tx.type === 'income' ? '+' : '-'}₹{tx.amount.toFixed(2)}
                 </td>
               </tr>
             ))}

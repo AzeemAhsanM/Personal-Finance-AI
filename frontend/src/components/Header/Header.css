@@ -6,10 +6,10 @@
 }
 
 .header-title {
-  color: rgba(60, 48, 204, 1);
+  color: #4135be;
 }
 .header-logo {
-  height: 100px; /* You can adjust this to make the logo bigger or smaller */
+  height: 70px; /* You can adjust this to make the logo bigger or smaller */
   margin-right: -15px; /* This adds some space between the logo and the title */
 }
 
