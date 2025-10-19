@@ -1,10 +1,10 @@
-WealthFy: AI-Powered Personal Finance Dashboard
+# WealthFy: AI-Powered Personal Finance Dashboard
 
 WealthFy is a modern, responsive web application designed to help users track their income and expenses, visualize their financial health, and gain intelligent insights through a conversational AI assistant.
 
 This project was built as a full-stack application with a React frontend, a Python FastAPI backend, and deployed on AWS.
 
-Features
+## Features
 
 Secure Authentication: User registration and login system with JWT-based authentication.
 
@@ -18,9 +18,9 @@ Financial Calculators: Built-in tools for calculating SIP (Systematic Investment
 
 Fully Responsive: A mobile-first design that works seamlessly on desktops, tablets, and mobile devices.
 
-Tech Stack
+## Tech Stack
 
-Frontend
+#### Frontend
 
 Framework: React.js
 
@@ -32,7 +32,7 @@ Styling: CSS3 with a mobile-first, responsive approach
 
 Charting: Recharts
 
-Backend
+#### Backend
 
 Framework: FastAPI (Python)
 
@@ -42,7 +42,7 @@ Authentication: JWT (JSON Web Tokens) with password hashing (bcrypt)
 
 AI Integration: Google Gemini API
 
-Deployment
+#### Deployment
 
 Frontend: AWS Amplify
 
@@ -50,11 +50,11 @@ Backend: AWS App Runner (via Docker)
 
 Database: AWS RDS for PostgreSQL
 
-Getting Started
+#### Getting Started
 
 To get a local copy up and running, follow these simple steps.
 
-Prerequisites
+#### Prerequisites
 
 Python 3.9+
 
@@ -64,31 +64,31 @@ A running PostgreSQL database instance
 
 A Google Gemini API Key
 
-Backend Setup
+#### Backend Setup
 
-Clone the repository:
+1. Clone the repository:
 
-git clone [https://github.com/your-username/Personal-Finance-AI.git](https://github.com/your-username/Personal-Finance-AI.git)
-cd Personal-Finance-AI/backend
+'git clone [https://github.com/your-username/Personal-Finance-AI.git](https://github.com/your-username/Personal-Finance-AI.git)
+cd Personal-Finance-AI/backend'
 
 
-Create and activate a virtual environment:
+2. Create and activate a virtual environment:
 
-# For Windows
+For Windows:
 python -m venv myenv
 myenv\Scripts\activate
 
-# For macOS/Linux
+For macOS/Linux:
 python3 -m venv myenv
 source myenv/bin/activate
 
 
-Install Python dependencies:
+3. Install Python dependencies:
 
 pip install -r requirements.txt
 
 
-Set up environment variables:
+4. Set up environment variables:
 
 Create a file named .env in the backend directory.
 
@@ -100,26 +100,25 @@ GEMINI_API_KEY="your_google_gemini_api_key"
 FRONTEND_URL="http://localhost:3000"
 
 
-Run the backend server:
+4. Run the backend server:
 
 uvicorn app.main:app --reload
 
-
 The server will be running at http://127.0.0.1:8000.
 
-Frontend Setup
+#### Frontend Setup
 
-Navigate to the frontend directory:
+1. Navigate to the frontend directory:
 
 cd ../frontend
 
 
-Install Node.js dependencies:
+2. Install Node.js dependencies:
 
 npm install
 
 
-Set up environment variables:
+3. Set up environment variables:
 
 Create a file named .env.local in the frontend directory.
 
@@ -128,11 +127,11 @@ Add the following variable to point to your local backend:
 REACT_APP_API_BASE_URL="[http://127.0.0.1:8000](http://127.0.0.1:8000)"
 
 
-Run the frontend development server:
+4. Run the frontend development server:
 
 npm start
 
 
-The application will open in your browser at http://localhost:3000.
+#### The application will open in your browser at http://localhost:3000.
 
 
