@@ -20,91 +20,84 @@ Fully Responsive: A mobile-first design that works seamlessly on desktops, table
 
 ## Tech Stack
 
-#### Frontend
+### Frontend
 
-Framework: React.js
+- Framework: React.js
 
-Routing: React Router
+- Routing: React Router
 
-API Communication: Axios
+- API Communication: Axios
 
-Styling: CSS3 with a mobile-first, responsive approach
+- Styling: CSS3 with a mobile-first, responsive approach
 
-Charting: Recharts
+- Charting: Recharts
 
-#### Backend
+### Backend
 
-Framework: FastAPI (Python)
+- Framework: FastAPI (Python)
 
-Database: PostgreSQL with SQLModel for ORM
+- Database: PostgreSQL with SQLModel for ORM
 
-Authentication: JWT (JSON Web Tokens) with password hashing (bcrypt)
+- Authentication: JWT (JSON Web Tokens) with password hashing (bcrypt)
 
-AI Integration: Google Gemini API
+- AI Integration: Google Gemini API
 
-#### Deployment
+### Getting Started
 
-Frontend: AWS Amplify
+- To get a local copy up and running, follow these simple steps.
 
-Backend: AWS App Runner (via Docker)
+### Prerequisites
 
-Database: AWS RDS for PostgreSQL
+- Python 3.9+
 
-#### Getting Started
+- Node.js and npm
 
-To get a local copy up and running, follow these simple steps.
+- A running PostgreSQL database instance
 
-#### Prerequisites
+- A Google Gemini API Key
 
-Python 3.9+
-
-Node.js and npm
-
-A running PostgreSQL database instance
-
-A Google Gemini API Key
-
-#### Backend Setup
+### Backend Setup
 
 1. Clone the repository:
 
-'git clone [https://github.com/your-username/Personal-Finance-AI.git](https://github.com/your-username/Personal-Finance-AI.git)
-cd Personal-Finance-AI/backend'
+ 'git clone [https://github.com/your-username/Personal-Finance-AI.git](https://github.com/your-username/Personal-Finance-AI.git)
+ cd Personal-Finance-AI/backend'
 
 
 2. Create and activate a virtual environment:
 
 For Windows:
-python -m venv myenv
-myenv\Scripts\activate
+  python -m venv myenv
+  myenv\Scripts\activate
 
 For macOS/Linux:
-python3 -m venv myenv
-source myenv/bin/activate
+  python3 -m venv myenv
+  source myenv/bin/activate
 
 
 3. Install Python dependencies:
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 
 4. Set up environment variables:
 
-Create a file named .env in the backend directory.
+- Create a file named .env in the backend directory.
 
-Add the following variables, replacing the placeholder values:
+- Add the following variables, replacing the placeholder values:
 
 DATABASE_URL="postgresql://YOUR_DB_USER:YOUR_DB_PASSWORD@localhost/YOUR_DB_NAME"
 SECRET_KEY="your_super_long_and_random_secret_key"
+
 GEMINI_API_KEY="your_google_gemini_api_key"
 FRONTEND_URL="http://localhost:3000"
 
 
 4. Run the backend server:
 
-uvicorn app.main:app --reload
+- uvicorn app.main:app --reload
 
-The server will be running at http://127.0.0.1:8000.
+- The server will be running at http://127.0.0.1:8000.
 
 #### Frontend Setup
 
@@ -120,18 +113,18 @@ npm install
 
 3. Set up environment variables:
 
-Create a file named .env.local in the frontend directory.
+- Create a file named .env.local in the frontend directory.
 
-Add the following variable to point to your local backend:
+- Add the following variable to point to your local backend:
 
-REACT_APP_API_BASE_URL="[http://127.0.0.1:8000](http://127.0.0.1:8000)"
+ REACT_APP_API_BASE_URL="[http://127.0.0.1:8000](http://127.0.0.1:8000)"
 
 
 4. Run the frontend development server:
 
-npm start
+ npm start
 
 
-#### The application will open in your browser at http://localhost:3000.
+### The application will open in your browser at http://localhost:3000.
 
 
