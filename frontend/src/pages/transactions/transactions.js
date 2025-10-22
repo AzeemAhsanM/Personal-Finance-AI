@@ -8,7 +8,7 @@ const Transactions = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await api.get('/transactions');
+        const response = await api.get('/transactions/list');
         setTransactions(response.data);
       } catch (error) {
         console.error('Error fetching transactions:', error);

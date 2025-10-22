@@ -1,7 +1,9 @@
 # main.py - FastAPI application entrypoint
 
 from fastapi import FastAPI
-from contextlib import asynccontextmanager  
+from contextlib import asynccontextmanager
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from .database import create_db_and_tables
 from .routers import auth_router, transactions_router, dashboard_router, ai_router
 from fastapi.middleware.cors import CORSMiddleware
@@ -40,3 +42,15 @@ app.include_router(auth_router.router)
 app.include_router(transactions_router.router)
 app.include_router(dashboard_router.router)
 app.include_router(ai_router.router)
+
+
+# Mount React build folder
+app.mount("/static", StaticFiles(directory="app/static/static", html=True), name="static")
+
+# Serve React index.html for any frontend route
+@app.get("/{full_path:path}")
+async def serve_react(full_path: str):
+    index_path = os.path.join("app/static", "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+    return {"error": "index.html not found"}
