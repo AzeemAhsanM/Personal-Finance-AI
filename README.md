@@ -2,7 +2,7 @@
 
 WealthFy is a modern, responsive web application designed to help users track their income and expenses, visualize their financial health, and gain intelligent insights through a conversational AI assistant.
 
-This project was built as a full-stack application with a React frontend, a Python FastAPI backend, and deployed on AWS.
+This project was built as a full-stack application with a React frontend, a Python FastAPI backend, and deployed 
 
 ## Features
 
