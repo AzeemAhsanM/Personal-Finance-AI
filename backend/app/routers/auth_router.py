@@ -9,12 +9,12 @@ from ..database import get_session
 from ..models import User
 from datetime import datetime, timedelta
 
-router = APIRouter(prefix="/api/auth", tags=["auth"])
+router = APIRouter(prefix="/auth", tags=["auth"])
 
 @router.post("/register", response_model=Token)
 def register(user_in: UserCreate):
     try:
-        user = create_user(user_in.username, user_in.password, user_in.full_name)
+        user = create_user(user_in.username, user_in.password,user_in.full_name)
         token = create_access_token(subject=str(user.id))
         return {"access_token": token, "token_type": "bearer"}
     except Exception as e:

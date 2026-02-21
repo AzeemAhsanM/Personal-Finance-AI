@@ -23,7 +23,7 @@ function App() {
         try {
           // This ensures the token is sent on the initial request
           api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-          const response = await api.get('/auth/me');
+          const response = await api.get('/api/auth/me');
           setUser(response.data);
         } catch (error) {
           localStorage.removeItem('token');

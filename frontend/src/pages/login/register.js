@@ -27,7 +27,7 @@ function Register() {
     setIsLoading(true);
 
     try {
-      // 3. API call to the /auth/register endpoint
+      // 3. API call to the /api/auth/register endpoint
       await api.post('/auth/register', {
         username: username,
         password: password,
