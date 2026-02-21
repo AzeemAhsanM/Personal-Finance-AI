@@ -9,7 +9,7 @@ from ..database import get_session
 from ..models import User
 from datetime import datetime, timedelta
 
-router = APIRouter(prefix="/auth", tags=["auth"])
+router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 @router.post("/register", response_model=Token)
 def register(user_in: UserCreate):

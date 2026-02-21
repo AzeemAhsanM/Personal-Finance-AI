@@ -6,7 +6,7 @@ from ..auth import decode_access_token
 from ..database import get_session
 from ..models import Transaction
 
-router = APIRouter(prefix="/ai", tags=["ai"])
+router = APIRouter(prefix="/api/ai", tags=["ai"])
 
 def get_current_user_id(authorization: str = Header(...)):
     try:

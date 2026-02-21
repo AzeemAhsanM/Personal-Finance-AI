@@ -5,7 +5,7 @@ from ..database import engine
 from ..models import Transaction, User
 from ..auth import decode_access_token, get_current_user
 
-router = APIRouter(prefix="/dashboard", tags=["dashboard"])
+router = APIRouter(prefix="/api/dashboard", tags=["dashboard"])
 
 @router.get("/summary")
 def summary(current_user: User = Depends(get_current_user)):
